@@ -1,0 +1,20 @@
+{
+  "posts": [
+    {
+      "doctorId": 1,
+      "doctorName": "Aadil Adi",
+      "department": "Saaaa",
+      "id": 1
+    },
+    {
+      "doctorId": 2,
+      "doctorName": "dsacxz",
+      "department": "fds",
+      "id": 2
+    }
+  ],
+  "comments": [],
+  "profile": {
+    "name": "typicode"
+  }
+}

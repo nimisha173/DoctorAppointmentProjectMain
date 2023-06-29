@@ -1,0 +1,372 @@
+.main {
+  font-family: 'Poppins', sans-serif;
+  width: 100vw;
+  background-color: #E1E1E1;
+  scroll-behavior: smooth;
+}
+.animation {
+  /* background-image: url(../../assets/bg-animation.gif); */
+  /* background-image: url(../../assets/bg.gif); */
+  /* background-image: url(https://cdn.dribbble.com/users/5055/screenshots/4949169/media/04f0f66ccacd704fe417283585d21a5c.gif); */
+  background-image: url(https://cdn.dribbble.com/users/77121/screenshots/3195837/media/965b105539f04f47216ba61da3767f55.gif);
+  /* background-image: url(https://cdn.dribbble.com/users/2008861/screenshots/5969275/media/fb0d48b9cf380893648aa98508578ea4.gif); */
+  background-repeat: no-repeat;
+}
+
+.landing {
+
+  background: rgba(255, 255, 255, 0);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(7px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  margin-top: 9vh;
+  background-color: transparent;
+  
+}
+.container-fluid{
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.book{
+  padding-left:20px;
+  padding-right: 20px;
+}
+.buble{
+  background-color: #D1F1E1;
+  height: 30%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+ 
+
+}
+.buble2{
+  height:65%;
+  border-radius: 10px;
+  margin-top: 10px;
+  padding-top: 10px;
+}
+
+
+
+
+
+.textpad {
+  padding-top: 25px;
+}
+
+.subtextpad {
+  padding-bottom: 15px;
+}
+.lead{
+  font-weight: 400;
+  margin-right: 15px;
+  margin-left: 10px;
+  font-size: 18px;
+}
+
+
+
+
+
+
+
+.seperator {
+  padding-top: 20px;
+  padding-bottom: 10px;
+  width: 100vw
+}
+
+.lineeee {
+  background-color: #000;
+  /* height: 2px; */
+  margin-top: 5px;
+  padding-top: 2px;
+
+  background-color: black;
+  width: 40vw;
+  margin: auto;
+  opacity: 0.3;
+}
+
+
+
+
+
+.hoverrr {
+  transition: background-color 0.3s ease;
+}
+
+.hoverrr:hover {
+  background-color: #007BFF;
+  /* Change the background color to your desired hover effect */
+  color: #fff;
+  /* Change the text color to your desired hover effect */
+  transform: scale(1.1);
+  /* Increase the scale value to zoom in further */
+
+
+}
+
+
+
+.paddingtop {
+  padding: 20px 10px 20px 10px;
+
+  /* border-radius: 20px; */
+
+}
+
+.carousel-card {
+  width: 250px;
+  border-radius: 5px;
+}
+
+.backgroundbl {
+  background-color: #F8F9FA;
+}
+
+
+.departmentdiv {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  position: relative;
+  overflow: hidden;
+}
+
+.departmentdiv::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(px);
+  /* Adjust the blur amount as desired */
+}
+
+
+.imgheight {
+  width: 10rem;
+  height: 10rem;
+  /* Adjust the height value as desired */
+  object-fit: contain;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  align-self: center;
+}
+
+.aligncar {
+  display: flex;
+  flex-direction: row;
+  margin-left: 30px;
+  margin-right: 20px;
+}
+
+.card-body {
+  /* From https://css.glass */
+  /* background: rgba(0, 123, 255, 0.1); */
+  border-radius: 10px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(11.3px);
+  -webkit-backdrop-filter: blur(11.3px);
+}
+
+.paddingtoponly {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-right: 30px;
+
+}
+
+
+.textdept {
+  padding-top: 40px;
+  padding-bottom: 15px;
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+  background-color: #F8F9FA;
+  width: 100vw;
+
+
+}
+
+.card {
+  border-style: none;
+  border-radius: 4px;
+  transition: .2s all;
+  box-shadow: 4px 4px 30px rgba(0, 0, 0, 0.389);
+
+ 
+
+}
+
+
+.card:hover {
+  transform: scale(1);
+
+  transform: translateY(-10px);
+  transition: all 0.2s ease;
+  z-index: 1;
+
+}
+
+
+.buttonll {
+
+  width: 200px;
+
+  background-color: #E1E1E1;
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  border: 2.7px solid rgb(0, 0, 0);
+  font-size: 17px;
+  font-weight: bolder;
+  background: transparent;
+  position: relative;
+  transition: all 0.6s;
+  overflow: hidden;
+}
+
+.buttonll:hover {
+  color: white;
+}
+
+.buttonll::before {
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 0%;
+  top: 0;
+  left: -40px;
+  transform: skew(45deg);
+  background-color: rgb(0, 0, 0);
+  z-index: -1;
+  transition: all 0.6s;
+}
+
+.buttonll:hover::before {
+  width: 160%;
+}
+
+
+
+.buttonlll {
+  padding-top: 15px;
+  height: 75px;
+  width: 180px;
+}
+
+.titlecol {
+  color: #141414;
+}
+
+.subtitlecol {
+  color: #1B1B1B;
+}
+
+.backgroundcol {
+  background-color: #E1E1E1;
+}
+
+.btn.btn-large {
+  font-size: 18px;
+  /* padding: 18px 35px; */
+}
+
+.highlight-button {
+  border: 3px solid #000;
+  display: inline-block;
+  padding: 8px 20px 9px;
+  font-size: 18px;
+  font-weight: 500;
+  color: #000;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+.highlight-button:hover {
+  background-color: #000;
+  border: 2px solid #000;
+  color: #fff
+}
+
+.highlight-button i {
+  color: #000
+}
+
+.highlight-button:hover i {
+  color: #fff
+}
+
+.service-item {
+  padding-left: 10px;
+  padding-right: 10px;
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(6.9px);
+  -webkit-backdrop-filter: blur(6.9px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  /* margin-left: 20px; */
+  height: 60vh;
+}
+
+.services {
+
+  background-color: #FFFFFF;
+  width: 100vw;
+}
+
+.serviceicon {
+  padding-left: 20px;
+  padding-top: 20px;
+}
+
+.service-title {
+  padding-left: 10px;
+}
+
+.service-description {
+
+  margin-left: 20px;
+  margin-right: 20px;
+
+}
+
+
+.aboutus {
+  width: 100vw;
+  text-align: center;
+}
+
+.imagernd {
+
+  margin-top: 15px;
+  margin-left: 10px;
+  width: 80px;
+  height: 80px;
+  object-fit: fill;
+  border-radius: 50px;
+}
+
+.body11 {
+  margin-left: 5px;
+  margin-right: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+
+}
+
+.footer {
+  padding-top: 40px;
+  text-align: center;
+  font-weight: 500;
+  color: darkslategray;
+}
+

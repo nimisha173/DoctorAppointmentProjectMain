@@ -1,0 +1,61 @@
+
+
+#search-bar{
+    width: 150px;
+    max-width: 350px;
+    padding: 5px;
+    height: 40px;
+}
+.input-group{
+    padding-top:3rem;
+    
+}
+
+.dropmenu {
+    position: relative;
+  }
+  
+ 
+  .card-img-top{
+    height: 100px;
+    width: 100px;
+  }
+
+
+.cardimgs{
+    width: auto;
+    height:50%;
+    object-fit: contain;
+    
+
+}
+.imageround{
+    border-radius: 50px;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+.btn-pad{
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+
+
+#gallery{
+  background-color: lightgray;
+  padding-top: 20px;
+  /* padding-bottom: 10px; */
+  padding-left:20px;
+  padding-right: 20px;
+  border-radius: 10px;
+}
+.form-group{
+  margin-bottom: 10px;
+  padding: 5px;
+}
+
+
+
+
+  

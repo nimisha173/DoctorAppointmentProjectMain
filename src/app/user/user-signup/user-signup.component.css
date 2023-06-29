@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&subset=devanagari,latin-ext');
+
+
+
+
+
+.container-fluid {
+  font-family: 'Poppins', sans-serif;
+  /* background-image: url(https://cdn.dribbble.com/userupload/2642510/file/original-b21d3c605377a287050b605703554100.jpg?compress=1&resize=1504x1128); */
+  background: url('../../../assets/bg.gif');
+  
+  background-repeat: no-repeat;
+  background-size:cover;
+  color: black;
+  font-weight: bold;
+}
+.blur{
+  background: rgba( 255, 255, 255, 0 );
+box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+backdrop-filter: blur( 10.5px );
+-webkit-backdrop-filter: blur( 10.5px );
+border-radius: 10px;
+}
+
+.text-uppercase {
+  font-weight: bold;
+}
+
+
+.text {
+  margin-bottom: 20px;
+  font-size: larger;
+}
+.text-start{
+  font-size: 16px;
+
+}
+.form-control{
+  font-size:14px;
+ 
+}
+
+.card {
+  background-color: transparent;
+  color: black;
+  height: fit-content;
+  width: 90vw;
+  margin: auto;
+  border-style: none;
+}
+
+.custom-button {
+  background-color: #343435;
+  color: #ffe8e8;
+  /* optional: set the text color to white */
+}
+
+#text-area {
+  color: black;
+}
+.form-control{
+  border-radius: 0px;
+  border-color: black;
+  border-width: 2.5px;
+}
+.form-control:focus{
+  
+
+}
+
+.formlabel {
+  color: rgb(0, 0, 0);
+  font-display: black;
+}
+
+.btn {
+  color: rgb(0, 0, 0);
+  width: 15vw;
+  border-radius: 2px;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: 2px solid rgb(0, 0, 0);
+  padding: 10px 20px;
+  font-size: 17px;
+  font-weight: bold;
+  background: transparent;
+  position: relative;
+  transition: all 1s;
+  overflow: hidden;
+}
+
+.btn:hover {
+  color: white;
+}
+
+.btn::before {
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 0%;
+  top: 0;
+  left: -40px;
+  transform: skewX(45deg);
+  background-color: rgb(0, 0, 0);
+  z-index: -1;
+  transition: all 1s;
+}
+
+.btn:hover::before {
+  width: 160%;
+}

@@ -1,0 +1,141 @@
+<app-usernav></app-usernav>
+<div class="container">
+    <div class="input-group mb-5">
+        <input type="search" class="form-control rounded" name="search" id="search-bar" placeholder="Search"
+            aria-label="Search" aria-describedby="search-addon" style="width: 200px;" [(ngModel)]="sdoctor" />
+        <!-- <button type="button" class="btn btn-primary" style="height: 40px; border-radius: 5px" (click)="searchdoc()" >Search</button>  -->
+
+        <!-- <div class="form-group ms-auto mb-5" style="width: 200px;" [formGroup]="mydropdown"> -->
+        <div class="form-group ms-auto mb-5" style="width: 200px;">
+            <label for="department">Department</label>
+            <select class="form-select" id="department" name="department" [(ngModel)]="sdepartment">
+
+                <option value="default" selected="selected">Speciality</option>
+
+                <option value="cardiology">Cardiology</option>
+                <option value="ophthalmology">Ophthalmology</option>
+                <option value="gastrology">Gastrology</option>
+                <option value="orthology">Orthology/option>
+                <option value="physician">Physician</option>
+                <option value="urology">Urology</option>
+                <option value="general">General</option>
+            </select>
+            <!-- <button class="btn btn-primary" type="button" (click)="searchdoc()">Search</button> -->
+            <button type="button" class="btn btn-primary" style="height: 40px; border-radius: 5px"
+                (click)="searchdoc()">Search</button>
+        </div>
+    </div>
+
+
+
+
+
+    <section id="gallery">
+        <div class="container1">
+            <div class="row">
+                <div class="col-lg-4 mb-4" *ngFor="let doc of doctorData">
+                    <div class="card">
+                        <div class="d-flex flex-row">
+                            <img src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=464&q=80"
+                                alt="" class="card-img-top imageround">
+                            <div class="card-body">
+                                <option class="card-title">{{ doc.doctorName }}</option>
+                                <option class="card-sub-title">{{ doc.department }}</option>
+                               
+                                <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal"
+                                    class="btn btn-outline-success btn-sm" (click)="doctorDetails(doc)">Book
+                                    Appointment</button>
+                                <!-- <a routerLink="/review" class="btn btn-outline-danger btn-sm">View Profile</a> -->
+                                <button class="btn btn-outline-success btn-sm" (click)="viewProfile(doc.doctorId)">View Profile</button>
+                            </div>
+                            <!-- <app-review *ngIf="selectedDoctor" [doctor]="selectedDoctor"></app-review> -->
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Fill Your Details</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+
+
+                <div class="modal-body">
+                    <form [formGroup]="myform">
+                        <div class="form-group ">
+                            <label for="userName">User Name</label>
+                            <input type="text" class="form-control" id="userName" formControlName="userName"
+                                placeholder="Enter your name" required>
+                        </div>
+                        <div class="form-group ">
+
+                            <label for="userID">User ID</label>
+                            <input type="text" class="form-control" id="userId" formControlName="userId"
+                                placeholder="Enter your ID" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="doctorId">Doctor Id</label>
+                            <input type="text" class="form-control" id="doctorId" formControlName="doctorId"
+                                placeholder="Enter doctor's Id" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="doctorId">Doctor Name</label>
+                            <input type="text" class="form-control" id="doctorName" formControlName="doctorName"
+                                placeholder="Enter doctor's Nme" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="doctorId">Department</label>
+                            <input type="text" class="form-control" id="doctorId" formControlName="department"
+                                placeholder="Enter doctor's Id" required>
+                        </div>
+
+                        <div class="form-group" [formGroup]="myform">
+                            <label for="appointmentTime">Appointment Time</label>
+
+                            <select class="form-control" id="date" formControlName="appointmentTime">
+                                <option>08:00</option>
+                                <option>09:00</option>
+                                <option>10:00</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label>
+                                Choose your preferred slot date:
+                                <input type="date" name="slotdate" formControlName="appointmentDate" min="2023-04-01"
+                                    max="2024-04-30" />
+                            </label>
+                        </div>
+                        <div class="form-group">
+                            <label for="details">Comments
+                                <textarea name="comments" id="details" formControlName="details"
+                                    style="font-family:sans-serif;font-size:1.2em;">
+
+                            </textarea>
+
+                            </label>
+
+                        </div>
+
+
+                    </form>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="cancel">Close</button>
+                    <button type="button" class="btn btn-primary" (click)="postAppointment()">Book Appointment</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
