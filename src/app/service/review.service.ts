@@ -17,4 +17,7 @@ export class ReviewService {
   getDoctorById(doctorId: number): Observable<Doctor> {
     return this.http.get<any>(`http://localhost:8000/admin/find/${doctorId}`);
 }
+  getReviewByDoctorId(doctorId:number):Observable<Review>{
+    return this.http.get<any>(`http://localhost:8300/review/doctor/${doctorId}`);
+  }
 }

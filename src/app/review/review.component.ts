@@ -16,6 +16,7 @@ export class ReviewComponent implements OnInit{
   ngOnInit(): void {
    
     this.getDoctorDetails();
+    this.getDoctorReviewById();
   
   }
     
@@ -27,6 +28,7 @@ export class ReviewComponent implements OnInit{
   ) {} 
   review:Review=new Review();
   reviewDetails: Doctor[] = [];
+  getReview:Review[]=[];
   getDoctorDetails(): void {
      
     
@@ -45,6 +47,35 @@ export class ReviewComponent implements OnInit{
       );
     }
   }
+
+  getDoctorReviewById(): void{
+    const doctorId = this.route.snapshot.paramMap.get('doctorId');
+    if (doctorId !== null) {
+      const parsedDoctorId = +doctorId;
+      this.reviewservice.getReviewByDoctorId(parsedDoctorId).subscribe((res)=>{
+        this.getReview.push(res);
+        console.log(res);
+        console.log(this.getReview);
+      },
+      (error) => {
+        console.log(error);
+      }
+
+      );
+    }
+
+
+
+  } 
+
+
+
+
+
+
+
+
+
   viewreview(){
     this.router.navigate(['/viewreview']);
   }
